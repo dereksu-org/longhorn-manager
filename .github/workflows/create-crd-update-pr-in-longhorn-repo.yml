@@ -1,13 +1,13 @@
-name: Create CRD Update PR in Longhorn Repo
+name: Create CRD and Manifests Update PR in Longhorn Repo
 
 on:
-  pull_request:
-    types:
-      - closed
+  push:
+    branches:
+      - 'master'
+      - 'v*'
 
 jobs:
-  if_merged:
-    if: github.event.pull_request.merged == true
+  create-pull-request:
     runs-on: ubuntu-latest
     steps:
     - name: Prepare Packages
