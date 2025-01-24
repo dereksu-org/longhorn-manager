@@ -12,7 +12,7 @@ spec:
   names:
     kind: BackingImageDataSource
     listKind: BackingImageDataSourceList
-    plural: backingimagedatasources
+    plural: backingimagedatasourc
     shortNames:
     - lhbids
     singular: backingimagedatasource
