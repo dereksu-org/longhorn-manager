@@ -9,7 +9,8 @@ on:
 
 jobs:
   create-pull-request:
-    if: github.event.pull_request.merged == true
+    # Only run this workflow when a PR is merged and changed files include crds.yaml
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.changed_files, 'k8s/crds.yaml')
     runs-on: ubuntu-latest
     steps:
     - name: Prepare Packages
