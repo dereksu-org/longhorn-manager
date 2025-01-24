@@ -72,7 +72,7 @@ spec:
     subresources:
       status: {}
   - additionalPrinterColumns:
-    - description: The system generated UUID of the provisioned backing image file
+    - description: The system generated UUID of the provisioned backing imag
       jsonPath: .spec.uuid
       name: UUID
       type: string
